@@ -19,6 +19,7 @@ function App() {
     {
       path: "/",
       element: <HomeLayout />,
+      errorElement: <Error />,
       children: [
         { index: true, element: <Landing /> },
         { path: "products", element: <Products /> },
@@ -29,8 +30,8 @@ function App() {
         { path: "orders", element: <Orders /> },
       ],
     },
-    { path: "/login", element: <Login /> },
-    { path: "register", element: <Register /> },
+    { path: "/login", element: <Login />, errorElement: <Error /> },
+    { path: "register", element: <Register />, errorElement: <Error /> },
   ]);
   return (
     <div>

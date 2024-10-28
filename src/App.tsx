@@ -22,7 +22,15 @@ function App() {
       element: <HomeLayout />,
       errorElement: <Error />,
       children: [
-        { index: true, element: <Landing />, errorElement: <ErrorElement /> },
+        {
+          index: true,
+          element: <Landing />,
+          errorElement: <ErrorElement />,
+          loader: async () => {
+            console.log("Landing");
+            return null;
+          },
+        },
         {
           path: "products",
           element: <Products />,

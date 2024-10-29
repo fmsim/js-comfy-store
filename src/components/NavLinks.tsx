@@ -13,6 +13,7 @@ function NavLinks() {
                 isActive ? "text-primary" : ""
               }`;
             }}
+            key={link.label}
           >
             {link.label}
           </NavLink>
